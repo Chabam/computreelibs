@@ -1,3 +1,4 @@
+# WARNING: The order here is important
 add_subdirectory(ctlibcommon)
 add_subdirectory(ctlibmodels)
 add_subdirectory(ctlibmodelsextraviews)
@@ -7,7 +8,6 @@ add_subdirectory(ctlibwidget)
 add_subdirectory(ctlibaction)
 add_subdirectory(ctlibclouds)
 add_subdirectory(ctlibstructure)
-
 add_subdirectory(ctlibstep)
 add_subdirectory(ctlibstructureaddon)
 add_subdirectory(ctlibactionaddon)
