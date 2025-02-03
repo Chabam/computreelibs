@@ -1,3 +1,5 @@
+project(ctlibpcl)
+
 set(CTLIBPCL_SOURCES
     ctlibpcl_global.h
     readers/ct_reader_pcd.h

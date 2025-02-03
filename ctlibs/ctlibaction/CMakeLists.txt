@@ -1,3 +1,5 @@
+project(ctlibsaction)
+
 set(CTLIBACTION_SOURCES
     ctlibaction_global.h
     ct_actions/abstract/ct_abstractaction.h

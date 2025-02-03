@@ -1,3 +1,5 @@
+project(ctlibactionaddon)
+
 set(CTLIBACTIONADDON_SOURCES
     ctlibactionaddon_global.h
     actions/pb_actionselectitemdrawablegv.h
