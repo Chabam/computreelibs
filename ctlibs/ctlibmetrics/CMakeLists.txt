@@ -29,6 +29,7 @@ add_library(ctlibmetrics SHARED
     ${CTLIBMETRICS_SOURCES}
     ${CTLIBMETRICS_TRANSLATIONS}
 )
+add_library(ctlibs::metrics ALIAS ctlibmetrics)
 
 target_include_directories(ctlibmetrics PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

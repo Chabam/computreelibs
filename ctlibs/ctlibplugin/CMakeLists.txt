@@ -33,6 +33,7 @@ add_library(ctlibplugin SHARED
     ${CTLIBPLUGIN_SOURCES}
     ${CTLIBPLUGIN_TRANSLATIONS}
 )
+add_library(ctlibs::plugin ALIAS ctlibplugin)
 
 target_include_directories(ctlibplugin PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

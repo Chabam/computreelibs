@@ -1,6 +1,6 @@
-project(ctlibsaction)
+project(ctlibaction)
 
-set(CTLIBACTION_SOURCES
+set(CTLIBACTION_HEADERS
     ctlibaction_global.h
     ct_actions/abstract/ct_abstractaction.h
     ct_actions/actionoptionsinterface.h
@@ -28,6 +28,7 @@ add_library(ctlibaction SHARED
     ${CTLIBACTION_SOURCES}
     ${CTLIBACTION_TRANSLATIONS}
 )
+add_library(ctlibs::action ALIAS ctlibaction)
 
 target_include_directories(ctlibaction PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

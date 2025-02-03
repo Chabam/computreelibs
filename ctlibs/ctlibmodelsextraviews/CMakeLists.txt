@@ -29,6 +29,7 @@ add_library(ctlibmodelsextraviews SHARED
     ${CTLIBMODELSEXTRAVIEWS_FORMS}
     ${CTLIBMODELSEXTRAVIEWS_TRANSLATIONS}
 )
+add_library(ctlibs::modelsextraviews ALIAS ctlibmodelsextraviews)
 
 target_include_directories(ctlibmodelsextraviews PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

@@ -69,6 +69,7 @@ add_library(ctlibcore SHARED
     ${CTLIBCORE_SOURCES}
     ${CTLIBCORE_TRANSLATIONS}
 )
+add_library(ctlibs::core ALIAS ctlibcore)
 
 target_include_directories(ctlibcore PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

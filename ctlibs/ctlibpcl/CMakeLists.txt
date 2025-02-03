@@ -1,6 +1,6 @@
 project(ctlibpcl)
 
-set(CTLIBPCL_SOURCES
+set(CTLIBPCL_HEADERS
     ctlibpcl_global.h
     readers/ct_reader_pcd.h
     tools/ct_pcltools.h
@@ -22,6 +22,7 @@ add_library(ctlibpcl SHARED
     ${CTLIBPCL_SOURCES}
     ${CTLIBPCL_TRANSLATIONS}
 )
+add_library(ctlibs::pcl ALIAS ctlibpcl)
 
 target_include_directories(ctlibpcl PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

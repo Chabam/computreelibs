@@ -23,6 +23,7 @@ add_library(ctlibexporter SHARED
     ${CTLIBEXPORTER_SOURCES}
     ${CTLIBEXPORTER_TRANSLATIONS}
 )
+add_library(ctlibs::exporter ALIAS ctlibexporter)
 
 target_include_directories(ctlibexporter PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

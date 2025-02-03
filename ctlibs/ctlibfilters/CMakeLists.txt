@@ -25,6 +25,7 @@ add_library(ctlibfilters SHARED
     ${CTLIBFILTERS_SOURCES}
     ${CTLIBFILTERS_TRANSLATIONS}
 )
+add_library(ctlibs::filters ALIAS ctlibfilters)
 
 target_include_directories(ctlibfilters PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

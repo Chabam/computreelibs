@@ -197,6 +197,7 @@ add_library(ctlibclouds SHARED
     ${CTLIBCLOUDS_SOURCES}
     ${CTLIBCLOUDS_TRANSLATIONS}
 )
+add_library(ctlibs::clouds ALIAS ctlibclouds)
 
 target_include_directories(ctlibclouds PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

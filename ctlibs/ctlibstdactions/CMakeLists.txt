@@ -45,6 +45,7 @@ add_library(ctlibstdactions SHARED
     ${CTLIBSTDACTIONS_RESOURCES}
     ${CTLIBSTDACTIONS_TRANSLATIONS}
 )
+add_library(ctlibs::stdactions ALIAS ctlibstdactions)
 
 target_include_directories(ctlibstdactions PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

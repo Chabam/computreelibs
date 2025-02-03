@@ -155,6 +155,7 @@ add_library(ctlibio SHARED
     ${CTLIBIO_FORMS}
     ${CTLIBIO_TRANSLATIONS}
 )
+add_library(ctlibs::io ALIAS ctlibio)
 
 target_include_directories(ctlibio PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

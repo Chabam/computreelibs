@@ -7,6 +7,7 @@ set(CTLIBOPENCV_HEADERS
 add_library(ctlibopencv INTERFACE
     ${CTLIBOPENCV_HEADERS}
 )
+add_library(ctlibs::opencv ALIAS ctlibopencv)
 
 target_include_directories(ctlibopencv INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}/

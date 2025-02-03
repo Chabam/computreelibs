@@ -76,6 +76,7 @@ add_library(ctlibstructure SHARED
     ${CTLIBSTRUCTURE_SOURCES}
     ${CTLIBSTRUCTURE_TRANSLATIONS}
 )
+add_library(ctlibs::structure ALIAS ctlibstructure)
 
 target_include_directories(ctlibstructure PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

@@ -328,6 +328,7 @@ add_library(ctlibstructureaddon SHARED
     ${CTLIBSTRUCTUREADDON_SOURCES}
     ${CTLIBSTRUCTUREADDON_TRANSLATIONS}
 )
+add_library(ctlibs::structureaddon ALIAS ctlibstructureaddon)
 
 target_include_directories(ctlibstructureaddon PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

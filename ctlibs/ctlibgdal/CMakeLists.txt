@@ -7,6 +7,7 @@ set(CTLIBGDAL_HEADERS
 add_library(ctlibgdal INTERFACE
     ${CTLIBGDAL_HEADERS}
 )
+add_library(ctlibs::gdal ALIAS ctlibgdal)
 
 target_include_directories(ctlibgdal INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}/

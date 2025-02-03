@@ -26,6 +26,7 @@ add_library(ctlibstepaddon SHARED
     ${CTLIBSTEPADDON_FORMS}
     ${CTLIBSTEPADDON_TRANSLATIONS}
 )
+add_library(ctlibs::stepaddon ALIAS ctlibstepaddon)
 
 target_include_directories(ctlibstepaddon PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

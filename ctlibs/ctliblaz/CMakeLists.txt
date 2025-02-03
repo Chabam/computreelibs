@@ -63,6 +63,7 @@ add_library(ctliblaz SHARED
     ${CTLIBLAZ_SOURCES}
     ${CTLIBLAZ_TRANSLATIONS}
 )
+add_library(ctlibs::laz ALIAS ctliblaz)
 
 target_include_directories(ctliblaz PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

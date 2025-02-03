@@ -29,6 +29,7 @@ add_library(ctlibreader SHARED
     ${CTLIBREADER_SOURCES}
     ${CTLIBREADER_TRANSLATIONS}
 )
+add_library(ctlibs::reader ALIAS ctlibreader)
 
 target_include_directories(ctlibreader PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

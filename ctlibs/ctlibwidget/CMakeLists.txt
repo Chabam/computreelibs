@@ -59,6 +59,7 @@ add_library(ctlibwidget SHARED
     ${CTLIBWIDGET_FORMS}
     ${CTLIBWIDGET_TRANSLATIONS}
 )
+add_library(ctlibs::widget ALIAS ctlibwidget)
 
 target_include_directories(ctlibwidget PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

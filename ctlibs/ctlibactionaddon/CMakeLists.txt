@@ -1,6 +1,6 @@
 project(ctlibactionaddon)
 
-set(CTLIBACTIONADDON_SOURCES
+set(CTLIBACTIONADDON_HEADERS
     ctlibactionaddon_global.h
     actions/pb_actionselectitemdrawablegv.h
     views/actions/pb_actionselectitemdrawablegvoptions.h
@@ -26,6 +26,7 @@ add_library(ctlibactionaddon SHARED
     ${CTLIBACTIONADDON_SOURCES}
     ${CTLIBACTIONADDON_FORMS}
 )
+add_library(ctlibs::actionaddon ALIAS ctlibactionaddon)
 
 target_include_directories(ctlibactionaddon PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/

@@ -142,6 +142,7 @@ add_library(ctlibmodels SHARED
     ${CTLIBMODELS_FORMS}
     ${CTLIBMODELS_TRANSLATIONS}
 )
+add_library(ctlibs::models ALIAS ctlibmodels)
 
 target_include_directories(ctlibmodels PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/
