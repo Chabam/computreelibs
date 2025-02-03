@@ -45,12 +45,13 @@ add_library(ctlibstdactions SHARED
     ${CTLIBSTDACTIONS_RESOURCES}
     ${CTLIBSTDACTIONS_TRANSLATIONS}
 )
-add_library(ctlibs::stdactions ALIAS ctlibstdactions)
 
 target_include_directories(ctlibstdactions PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/>
+    $<INSTALL_INTERFACE:include/ctlibs/ctlibstdactions>
     # TODO: fix the actual include
-    ${ctlibs_SOURCE_DIR}/ctlibs
+    $<BUILD_INTERFACE:${ctlibs_SOURCE_DIR}/ctlibs>
+    $<INSTALL_INTERFACE:include/ctlibs/>
 )
 
 target_compile_definitions(ctlibstdactions PRIVATE CTLIBSTDACTIONS_LIBRARY)

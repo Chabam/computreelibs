@@ -22,10 +22,10 @@ add_library(ctlibpcl SHARED
     ${CTLIBPCL_SOURCES}
     ${CTLIBPCL_TRANSLATIONS}
 )
-add_library(ctlibs::pcl ALIAS ctlibpcl)
 
 target_include_directories(ctlibpcl PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/>
+    $<INSTALL_INTERFACE:include/ctlibs/ctlibpcl>
 )
 
 target_compile_definitions(ctlibpcl PRIVATE CTLIBPCL_LIBRARY)

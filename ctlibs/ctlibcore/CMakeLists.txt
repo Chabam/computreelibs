@@ -69,10 +69,10 @@ add_library(ctlibcore SHARED
     ${CTLIBCORE_SOURCES}
     ${CTLIBCORE_TRANSLATIONS}
 )
-add_library(ctlibs::core ALIAS ctlibcore)
 
 target_include_directories(ctlibcore PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/
+    $<BUILD_INTERFACE:$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/>>
+    $<INSTALL_INTERFACE:include/ctlibs/ctlibcore>
 )
 
 target_compile_definitions(ctlibcore PRIVATE COMPUTREECORE_LIBRARY)

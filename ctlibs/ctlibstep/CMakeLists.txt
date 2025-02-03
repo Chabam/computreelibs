@@ -33,10 +33,10 @@ add_library(ctlibstep SHARED
     ${CTLIBSTEP_SOURCES}
     ${CTLIBSTEP_TRANSLATIONS}
 )
-add_library(ctlibs::step ALIAS ctlibstep)
 
 target_include_directories(ctlibstep PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/>
+    $<INSTALL_INTERFACE:include/ctlibs/ctlibstep>
 )
 
 target_compile_definitions(ctlibstep PRIVATE CTLIBSTEP_LIBRARY)

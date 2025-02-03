@@ -27,10 +27,10 @@ add_library(ctliblog SHARED
     ${CTLIBLOG_SOURCES}
     ${CTLIBLOG_TRANSLATIONS}
 )
-add_library(ctlibs::log ALIAS ctliblog)
 
 target_include_directories(ctliblog PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/>
+    $<INSTALL_INTERFACE:include/ctlibs/ctliblog>
 )
 
 target_compile_definitions(ctliblog PRIVATE CTLIBLOG_LIBRARY)

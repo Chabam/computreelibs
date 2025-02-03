@@ -27,10 +27,10 @@ add_library(ctlibmath SHARED
     ${CTLIBMATH_SOURCES}
     ${CTLIBMATH_TRANSLATIONS}
 )
-add_library(ctlibs::math ALIAS ctlibmath)
 
 target_include_directories(ctlibmath PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/>
+    $<INSTALL_INTERFACE:include/ctlibs/ctlibmath>
 )
 
 target_compile_definitions(ctlibmath PRIVATE CTLIBMATH_LIBRARY)

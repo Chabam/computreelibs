@@ -30,10 +30,10 @@ add_library(ctlibstructurewidget SHARED
     ${CTLIBSTRUCTUREWIDGET_SOURCES}
     ${CTLIBSTRUCTUREWIDGET_TRANSLATIONS}
 )
-add_library(ctlibs::structurewidget ALIAS ctlibstructurewidget)
 
 target_include_directories(ctlibstructurewidget PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/>
+    $<INSTALL_INTERFACE:include/ctlibs/ctlibstructurewidget>
 )
 
 target_compile_definitions(ctlibstructurewidget PRIVATE CTLIBSTRUCTUREWIDGET_LIBRARY)

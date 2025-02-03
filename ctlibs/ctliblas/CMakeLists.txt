@@ -74,10 +74,10 @@ add_library(ctliblas SHARED
     ${CTLIBLAS_SOURCES}
     ${CTLIBLAS_TRANSLATIONS}
 )
-add_library(ctlibs::las ALIAS ctliblas)
 
 target_include_directories(ctliblas PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/>
+    $<INSTALL_INTERFACE:include/ctlibs/ctliblas>
 )
 
 target_compile_definitions(ctliblas PRIVATE CTLIBLAS_LIBRARY)
