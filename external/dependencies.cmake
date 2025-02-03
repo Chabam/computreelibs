@@ -1,7 +1,7 @@
 # NOTE: using find_package for the moment, may be fallback to
 # fetchContent in the future?
 
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/external/cmake/modules")
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake/modules")
 
 # Qt settings
 set(CMAKE_AUTOMOC ON)
@@ -23,7 +23,7 @@ find_package(LASzip REQUIRED)
 include(FetchContent)
 
 # NOTE: The original authors of Computree did some changes to this fork...
-set(NodeEditorPatch git apply ${CMAKE_SOURCE_DIR}/external/computree-custom.patch)
+set(NodeEditorPatch git apply ${CMAKE_CURRENT_LIST_DIR}/computree-custom.patch)
 FetchContent_Declare(NodeEditor
     GIT_REPOSITORY https://github.com/Daguerreo/NodeEditor
     GIT_TAG 9bf1549e9bf1f4bf75c2a381402593c4a8b21a27

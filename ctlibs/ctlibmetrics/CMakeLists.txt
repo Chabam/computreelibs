@@ -34,7 +34,7 @@ add_library(ctlibs::metrics ALIAS ctlibmetrics)
 target_include_directories(ctlibmetrics PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/
     # TODO: fix the actual include
-    ${CMAKE_SOURCE_DIR}/ctlibs
+    ${ctlibs_SOURCE_DIR}/ctlibs
 )
 
 target_compile_definitions(ctlibmetrics PRIVATE CTLIBMETRICS_LIBRARY)

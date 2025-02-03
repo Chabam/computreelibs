@@ -50,7 +50,7 @@ add_library(ctlibs::stdactions ALIAS ctlibstdactions)
 target_include_directories(ctlibstdactions PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/
     # TODO: fix the actual include
-    ${CMAKE_SOURCE_DIR}/ctlibs
+    ${ctlibs_SOURCE_DIR}/ctlibs
 )
 
 target_compile_definitions(ctlibstdactions PRIVATE CTLIBSTDACTIONS_LIBRARY)

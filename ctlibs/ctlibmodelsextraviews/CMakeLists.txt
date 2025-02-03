@@ -34,7 +34,7 @@ add_library(ctlibs::modelsextraviews ALIAS ctlibmodelsextraviews)
 target_include_directories(ctlibmodelsextraviews PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/
     # TODO: fix the actual include
-    ${CMAKE_SOURCE_DIR}/ctlibs
+    ${ctlibs_SOURCE_DIR}/ctlibs
 )
 
 target_compile_definitions(ctlibmodelsextraviews PRIVATE CTLIBMODELSEXTRAVIEWS_LIBRARY)
