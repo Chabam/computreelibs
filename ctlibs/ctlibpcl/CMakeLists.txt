@@ -28,6 +28,11 @@ target_include_directories(ctlibpcl PUBLIC
     $<INSTALL_INTERFACE:include/ctlibs/ctlibpcl>
 )
 
+if(WIN32)
+    # NOTE: Disable exceptions, it's causing linking error on Windows
+    set(CMAKE_CXX_FLAGS "/EHsc")
+endif()
+
 target_compile_definitions(ctlibpcl PRIVATE CTLIBPCL_LIBRARY)
 target_link_libraries(ctlibpcl
     ctlibcommon
